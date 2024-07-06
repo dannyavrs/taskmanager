@@ -14,11 +14,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+
 public class TaskmanagerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TaskmanagerApplication.class, args);
 	}
+
 	@Bean
 	public CommandLineRunner commandLineRunner(EmployeeDAO employeeDAO, DepartmentDAO departmentDAO, TaskDAO taskDAO, TeamDAO teamDAO, TeamService teamService) {
 		return runner -> {
@@ -41,5 +43,7 @@ public class TaskmanagerApplication {
 		//add this to the controller
 		//make sure that the user can be able to watch the exception message
 	}
+
+
 
 }
